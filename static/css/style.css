@@ -1,0 +1,125 @@
+
+/* MODAL LOGIN PAGE */
+@keyframes animModal{
+    from{
+        margin-right: -250px;
+    }
+    to{
+        margin-right: 0px;
+    }
+}
+@keyframes GanimModal{
+    from{
+        margin-right: 0px;
+    }
+    to{
+        margin-right: -250px;
+    }
+    
+}
+
+.modal, .rmodal{
+    box-shadow: 1px 0px 6px grey;
+    width: 900px;
+    height: 450px;
+    display: flex; 
+    visibility: hidden;
+    position: absolute;
+    flex-direction: row;
+    top: 60px;
+    right: 1%;
+    /* border: 1px solid rgb(205, 206, 207); */
+    background-color: white;  
+    font-family: Montserrat;
+    
+}
+.login-img{
+    width: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+#login:hover, #register:hover, #closebtn:hover, #rclosebtn:hover{
+    cursor: pointer;
+}
+
+
+.login-card{
+    font-family: Montserrat;
+    width: 400px; 
+    background-color: white;
+    margin: 40px auto;
+    margin-top: 10px; 
+}
+
+
+.ktitle{ 
+    padding-top: 10px; 
+}
+.ksign-in{
+    font-weight: 700;
+}
+
+.kbutton{
+    background-color: #F1F5F8;
+    width: 250px;
+    padding: 10px 0px;
+    margin: 10px auto;
+    font-size: 15px;
+}
+
+.kbutton a{ 
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+form{ 
+    width: 250px;
+    margin: 10px auto;
+}
+
+.m-input{ 
+    margin: 5px 0px;
+    width: 243px;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid grey;
+}
+
+button{
+    border: none;
+}
+
+.down{
+    display: flex; 
+    justify-content: space-between;
+     width: 260px;
+    margin: 10px auto;
+    font-size: 11px;
+}
+
+.down a{
+    color: blue; 
+    padding-top: 5px;
+}
+
+.icon{
+    height: 15px;
+    padding: 2px;
+}
+
+/*Constants*/
+.kred, .kblue{
+    background-color: red;
+    color: white;
+     padding: 13px 0px;
+    width: 255px;
+}
+.kblue{
+    background-color: blue; 
+}
+.kcenter{
+    text-align: center;
+}

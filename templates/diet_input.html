@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/w3.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <!-- <link rel="shortcut icon" type="/png" href="/res/logo.jpg"/> -->
+    <title>Nutrition research Database</title>
+   
+</head>
+<body style="font-family: 'Abel';font-size: 22px;">
+   <div class="w3-container-fluid">
+    <div style="margin-bottom: -18px;" class="w3-animate-top">
+        <div class="w3-bar w3-teal w3-border w3-card-4 w3-padding-32">
+            <a href="/home" style="text-decoration: none;">  <span style="width:220px; height: 110px; margin:-30px 30px">DASHBOARD </span> </a>
+            <a href="/" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-right w3-hover-light-grey  w3-hover-text-brown  ">Contact Us</a>
+    
+            <div class="w3-dropdown-hover w3-right w3-hide-medium w3-hide-small">
+                <button class="w3-button">Samjay <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-opacity">
+                    <a href="" class="w3-bar-item w3-button">Profile</a>
+                    <a href="" class="w3-bar-item w3-button">Accounts</a>
+                    <a href="" class="w3-bar-item w3-button">Logout</a>
+                </div>
+            </div>
+            <a href="/files" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-light-grey  w3-hover-text-brown ">MyFiles</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large " onclick="myFunction()">&#9776;</a>
+        </div>
+        <div id="demo" class="w3-bar-block w3-hide w3-hide-large  " style="position: absolute; background:#a87037; z-index: 1; margin-top:0px; width:100%;" >
+    
+            <a href="/files" class="w3-bar-item w3-button ">MyFiles</a>
+            <div class="w3-dropdown-hover  w3-mobile" style="padding:-60px 0px;">
+                <button class="w3-button">Samjay <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-opacity">
+                    <a href="" class="w3-bar-item w3-button">Profile</a>
+                    <a href="" class="w3-bar-item w3-button">Accounts</a>
+                    <a href="" class="w3-bar-item w3-button">Logout</a>
+                </div>
+            </div>
+    
+            <a href="/index" class="w3-bar-item w3-button">Contact Us</a>
+        </div>
+    </div>
+
+
+    <!-- main body -->
+
+   <div class="w3-row-padding">
+     
+
+       <div style="margin: auto; width: 650px;">
+        <div class="w3-container w3-padding">
+            <div class="w3-panel w3-pale-green w3-center w3-padding">
+                <h1> Nutrient Estimation</h1>
+                <p><i>Descriptions: Estimate the Diet for a whole day eg. Morning, Afternoon, Evening and Snack</i></p>
+              </div>
+        </div>
+       </div>
+
+       <div class="w3-container w3-dark-gray">
+        Dietary Recall:
+    </div>
+   
+        <div class="container-fluid">
+            <h1  class="w3-center w3-text-pale-red">
+                 <span class="w3-text-light-green">Morning</span>
+                 <span class="w3-text-red">|</span> 
+                 <span class="w3-text-amber">Afternoon</span> 
+                 <span class="w3-text-red">|</span> 
+                 <span class="w3-text-light-blue">Evening</span>
+            </h1>
+        <form style="width: 80%;" action="/post">
+            <div class="w3-container w3-padding-16">
+                <h2 class="w3-border w3-round-large w3-pale-red w3-padding w3-center">Household Individual personal info</h2>
+                
+                <div class="w3-third w3-margin">
+                    <input  type="text" name="housenumber" placeholder="House Number" class="w3-input" required >                   
+                </div>
+               
+                <div class="w3-half  w3-margin">
+                <input  type="text" name="relationship" placeholder="Relationship eg.mother" class="w3-input"  required>
+                </div>
+                
+                <div class=" w3-margin" style="width: 80%;">
+                <input  type="text" name="individualname" placeholder="Individual's Name" class="w3-input" required>
+                </div>
+                
+                <div class="w3-third  w3-margin">
+                <input  type="text" name="id" placeholder="Individual's ID" class="w3-input" required>
+               </div>
+               
+               <div class="w3-margin w3-padding-24">
+                <input class="w3-radio" type="radio" name="gender" checked value="male">
+                <label>Male</label>
+                <input class="w3-radio" type="radio" name="gender" value="female">
+                <label>Female</label>
+               </div>
+
+            </div>
+            <table id="table" class="w3-table w3-bordered">
+                <tr class="w3-pale-red">
+                    <th>Name</th>
+                    <th>Weight (grams)</th> 
+                    <th>Period </th>
+                    <th>Time eg. 8:30am</th>
+                </tr>
+             
+                <tr>
+                    <td>eg.stew</td>
+                    <td>eg.20.0</td>
+                    <td>eg.Morning</td>
+                    <td>eg.2:00 am</td>
+                </tr>
+        
+            </table>
+
+            <div class="w3-margin w3-center">
+                <!-- <div id="nextclick" class="w3-btn w3-green">Next Section</div> -->
+                <button id="editclick" type="button"   class="w3-btn w3-deep-orange">Edit & continue</button>
+                <button id="savebtn" type="submit" class="w3-btn w3-deep-purple" disabled>Finish</button>
+            </div>
+        </form>
+
+        <div class="w3-container w3-padding w3-border w3-hover-shadow " style="width: 80%; margin: 20px auto;">
+            Please fill ALL  
+            <input class="w3-radio" type="radio" name="day" value="morning" checked>
+            <label>Morning</label>
+            
+            <input class="w3-radio" type="radio" name="day" value="afternoon">
+            <label>Afternoon</label>
+
+            <input class="w3-radio" type="radio" name="day" value="evening">
+            <label>Evening</label>
+
+                <input id='name' type="text" placeholder="eg.Stew" class="w3-input" required >
+                <input id="weight" type="text" placeholder="eg.20.0" class="w3-input"  required>
+                <input id='time' type="text" placeholder="eg.7:00 am" class="w3-input" required>
+                <div id="addclick"  class="w3-btn w3-light-green w3-margin"> <span style="color: white;"> Add new Item </span> </div>
+            
+        </div>
+           
+        </div>        
+
+   </div>
+   </div>
+   <footer style="height: 100px; margin-top: 40px;" class="w3-container w3-gray">
+    <p class="w3-center">Copyright by <b>Awinteck</b>&copy Developed by Samjay</p>
+</footer>
+
+   <script> 
+names = [] //temporary storage only
+weights = []
+times = []
+days = []
+ 
+
+document.getElementById("addclick").addEventListener("click", function(){
+   
+    var name = document.getElementById('name').value
+    var weight = document.getElementById('weight').value
+    var time = document.getElementById('time').value
+
+    document.getElementById('savebtn').disabled = true;
+
+    if(name.length != 0 && weight.length != 0 && time.length != 0){
+        names.push(name)
+    weights.push(weight)
+    times.push(time) 
+    days.push(radios())
+      console.log('data', names +weights+ times +days) 
+    }
+   
+    document.getElementById('table').innerHTML =` <tr class="w3-pale-red">
+                    <th>Name</th>
+                    <th>Weight (grams)</th>
+                    <th>Period</th>
+                    <th>Time eg. 8:30am</th>
+                </tr>`
+    i = 0;
+    while( i<names.length){  
+        document.getElementById('table').innerHTML += '<tr> <td> '+names[i] + '</td> ' +
+                '<td>'+weights[i] + '</td> ' +
+                '<td>'+days[i] + '</td> ' +
+                '<td> '+times[i] + '</td> </tr>';
+                i++; 
+    }
+        clearInputs();
+});
+
+function clearInputs(){
+     document.getElementById('name').value = ""
+     document.getElementById('weight').value = ""
+     document.getElementById('time').value = ""
+}
+
+document.getElementById('editclick').addEventListener('click', function(){
+      i = 0;
+    document.getElementById('table').innerHTML =` <tr class="w3-pale-red">
+                    <th>Name</th>
+                    <th>Weight (grams)</th>
+                    <th>Period</th>
+                    <th>Time eg. 8:30am</th>
+                </tr>`
+    while( i<names.length){  
+        document.getElementById('table').innerHTML += '<tr> <td> <input class="w3-input w3-hover-shadow" type="text" name=name,' +i +' value=' +names[i] + '></td> ' +
+                '<td><input class="w3-input w3-hover-shadow" type="text" name=weight,' +i +' value='+weights[i] + '></td> ' +
+                '<td><input class="w3-input w3-hover-shadow" type="text" name=day,' +i +' value='+days[i] + '></td> ' +
+                '<td><input class="w3-input w3-hover-shadow" type="text" name=time,' +i +' value='+times[i] + '></td> </tr>';
+                i++; 
+    }
+  if(names.length != 0 ){
+  document.getElementById('savebtn').disabled = false;
+  }
+})
+
+
+// document.getElementById('nextclick').addEventListener('click', function(){
+//       i = 0;
+//     document.getElementById('editclick').disabled = false
+//     document.getElementById('table').innerHTML =` <tr class="w3-pale-red">
+//                     <th>Name</th>
+//                     <th>Weight (grams)</th>
+//                     <th>Period</th>
+//                     <th>Time eg. 8:30am</th>
+//                 </tr>`
+//     while( i<names.length){  
+//         document.getElementById('table').innerHTML += '<tr> <td> '+names[i] + '</td> ' +
+//                 '<td>'+weights[i] + '</td> ' +
+//                 '<td>'+days[i] + '</td> ' +
+//                 '<td> '+times[i] + '</td> </tr>'; 
+//         i++; 
+//     }
+//   if(names.length != 0){
+//   document.getElementById('savebtn').disabled = false;
+//   }
+// })
+function radios(){
+    var rbtn = document.getElementsByName('day')
+   selected = ""
+    for(i=0; i<rbtn.length; i++){
+        if(document.getElementsByName('day') [i].checked ){
+            selected = document.getElementsByName('day') [i].value;
+        
+        }
+    }
+    return selected;
+}
+
+function validatePerson(){
+    var iname = document.getElementsByName('individualname').value
+    var id = document.getElementsByName('id').value
+    var ihse = document.getElementsByName('housenumber').value
+    var irel = document.getElementsByName('relationship').value
+   
+   if(iname && id && ihse && irel != 0){
+            return true;
+        }
+    else{
+        return false;
+    }
+   }
+
+    function myFunction() {
+        var x = document.getElementById("demo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += "w3-show";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+        }
+    }
+  
+</script>
+</body>
+</html>
